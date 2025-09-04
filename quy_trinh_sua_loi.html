@@ -10,6 +10,33 @@
         section { margin-bottom: 30px; }
         .example { background-color: #f4f4f4; padding: 10px; border-left: 5px solid #ccc; }
         .highlight { background-color: #ffff99; padding: 5px; }
+        .pie-chart-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .pie-chart {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: conic-gradient(#ff6384 0% 27.5%, #36a2eb 27.5% 82.5%, #cc65fe 82.5% 100%);
+        }
+        .chart-legend {
+            list-style: none;
+            padding: 0;
+        }
+        .chart-legend li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .color-box {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 2px;
+        }
     </style>
 </head>
 <body>
@@ -119,6 +146,19 @@
             <li>Các thiết bị: Desktop, laptop, tablet, smartphone.</li>
         </ul>
         </p>
+    </section>
+
+    <section id="phan-bo-effort">
+        <h2>Phân bổ effort trong quy trình sửa lỗi</h2>
+        <p>Trong quy trình sửa lỗi toàn diện, việc sửa code chỉ chiếm khoảng <strong>25-30%</strong> effort tổng thể. Phần lớn effort (<strong>50-60%</strong>) được dành cho việc test để đảm bảo chất lượng, bao gồm tái hiện lỗi, kiểm tra sửa chữa, phát hiện lỗi tương tự và kiểm tra degrade bug. Phần còn lại (10-15%) dành cho phân tích, tài liệu và đánh giá tác động.</p>
+        <div class="pie-chart-container">
+            <div class="pie-chart"></div>
+            <ul class="chart-legend">
+                <li><span class="color-box" style="background-color: #ff6384;"></span> Sửa code: 25-30%</li>
+                <li><span class="color-box" style="background-color: #36a2eb;"></span> Test và kiểm tra: 50-60%</li>
+                <li><span class="color-box" style="background-color: #cc65fe;"></span> Phân tích & tài liệu: 10-15%</li>
+            </ul>
+        </div>
     </section>
 </body>
 </html>
