@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tài liệu bàn giao chất lượng phần mềm</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-indigo-100 text-gray-900 min-h-screen">
+  <div class="max-w-6xl mx-auto p-8 space-y-10">
+    <!-- Header Section -->
+    <header class="text-center py-8">
+      <h1 class="text-4xl font-bold text-indigo-800 mb-4 flex items-center justify-center">
+        <i class="fas fa-file-alt text-indigo-600 mr-3"></i>
+        Tài liệu bàn giao để chứng minh chất lượng phần mềm
+      </h1>
+      <div class="w-24 h-1 bg-indigo-600 mx-auto rounded-full"></div>
+    </header>
+
+    <!-- Introduction -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Để kiểm soát và chứng minh chất lượng trong các dự án phần mềm (đặc biệt là phần mềm may đo cho doanh nghiệp), nhóm phát triển và kiểm thử thường phải bàn giao đầy đủ các tài liệu dưới đây:
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+      <h2 class="text-3xl font-semibold mb-6 text-indigo-800 flex items-center">
+        <i class="fas fa-list-check text-indigo-600 mr-3"></i>
+        Danh sách tài liệu chính
+      </h2>
+
+      <ol class="space-y-6">
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">1</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Kế hoạch kiểm thử (Test Plan)</strong>
+            <p class="text-gray-600 mt-2">Mô tả phạm vi kiểm thử, mục tiêu, phương pháp, công cụ, nguồn lực.</p>
+            <p class="text-gray-600">Gắn với tiêu chuẩn (VD: IEEE 829, hoặc ISO/IEC/IEEE 29119).</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">2</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Chiến lược kiểm thử (Test Strategy)</strong>
+            <p class="text-gray-600 mt-2">Tài liệu mức cao hơn, định nghĩa nguyên tắc chung: loại test, mức test (unit, integration, system, acceptance), môi trường test.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">3</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Đặc tả ca kiểm thử (Test Case Specification / Test Scenario)</strong>
+            <p class="text-gray-600 mt-2">Danh sách chi tiết ca kiểm thử, điều kiện đầu vào, bước thực hiện, kết quả mong đợi.</p>
+            <p class="text-gray-600">Có thể gắn trực tiếp với User Story (Agile) hoặc Requirement ID (Waterfall).</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">4</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Ma trận truy vết yêu cầu (Requirement Traceability Matrix – RTM)</strong>
+            <p class="text-gray-600 mt-2">Bảng mapping giữa Yêu cầu ↔ Test case ↔ Kết quả test.</p>
+            <p class="text-gray-600">Giúp chứng minh tất cả yêu cầu đều được kiểm thử.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">5</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Kết quả chạy kiểm thử (Test Execution Report)</strong>
+            <p class="text-gray-600 mt-2">Log, screenshot, video, hoặc xuất từ công cụ CI/CD (Jenkins, GitLab, Azure DevOps…).</p>
+            <p class="text-gray-600">Ghi rõ test pass/fail, thời gian, người thực hiện.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">6</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Báo cáo lỗi (Defect Report / Bug Report)</strong>
+            <p class="text-gray-600 mt-2">Mỗi lỗi có ID, mô tả, mức độ nghiêm trọng (Severity), độ ưu tiên (Priority), trạng thái (Open/In Progress/Closed).</p>
+            <p class="text-gray-600">Bằng chứng lỗi: ảnh chụp màn hình, log hệ thống, video ghi lại thao tác.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">7</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Test Evidence (Bằng chứng kiểm thử)</strong>
+            <p class="text-gray-600 mt-2">Đây là tài liệu trọng yếu khi bàn giao, thường gồm:</p>
+            <ul class="list-disc list-inside mt-2 space-y-1 text-gray-600 ml-4">
+              <li>Screenshot khi test thành công.</li>
+              <li>Log hệ thống xác nhận dữ liệu đúng.</li>
+              <li>File export kết quả chạy test tự động (JUnit, Cypress, Playwright…).</li>
+              <li>Video screen record (nếu yêu cầu).</li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">8</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Báo cáo độ bao phủ (Coverage Report)</strong>
+            <p class="text-gray-600 mt-2">Chứng minh mức C0 (câu lệnh), C1 (nhánh) đã đạt bao nhiêu %.</p>
+            <p class="text-gray-600">Export từ công cụ như JaCoCo, Istanbul, Clover, SonarQube…</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">9</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Báo cáo tổng hợp bàn giao (Test Summary Report)</strong>
+            <p class="text-gray-600 mt-2">Tổng quan số lượng ca kiểm thử, pass/fail, defect mở/đóng, DRE, leakage, coverage…</p>
+            <p class="text-gray-600">Đóng vai trò như "giấy chứng nhận chất lượng" khi bàn giao.</p>
+          </div>
+        </li>
+
+        <li class="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl border-l-4 border-indigo-500">
+          <span class="flex-shrink-0 w-8 h-8 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-sm">10</span>
+          <div class="flex-1">
+            <strong class="text-lg text-gray-800">Checklist kiểm thử hồi quy & smoke test (nếu có)</strong>
+            <p class="text-gray-600 mt-2">Đảm bảo hệ thống không bị ảnh hưởng khi release bản mới.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Note Section -->
+    <div class="bg-amber-50 p-6 rounded-xl border border-amber-200 shadow-md">
+      <h3 class="text-xl font-semibold mb-3 text-amber-800 flex items-center">
+        <i class="fas fa-lightbulb text-amber-600 mr-2"></i>
+        Lưu ý
+      </h3>
+      <p class="text-gray-700 text-base leading-relaxed">
+        Tùy từng công ty và thị trường (Nhật, Mỹ, Ấn Độ…), danh sách tài liệu có thể thay đổi. Tuy nhiên, các tài liệu trên gần như là chuẩn chung để chứng minh chất lượng phần mềm và đáp ứng yêu cầu kiểm toán hoặc ISO/CMMI.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
