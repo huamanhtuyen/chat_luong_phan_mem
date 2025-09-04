@@ -6,42 +6,71 @@
     <title>Menu Chính - Chất Lượng Phần Mềm</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 90%;
         }
         h1 {
             color: #333;
             text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         ul {
             list-style-type: none;
             padding: 0;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
         li {
-            margin: 20px 0;
+            display: flex;
         }
         a {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #007bff;
+            flex: 1;
+            padding: 20px 30px;
+            background: linear-gradient(45deg, #007bff, #0056b3);
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+            border: 2px solid transparent;
         }
         a:hover {
-            background-color: #0056b3;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 123, 255, 0.5);
+            border-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Menu Danh Mục</h1>
-    <ul>
-        <li><a href="tai_lieu_chat_luong.html">Tài Liệu Chất Lượng</a></li>
-        <li><a href="quy_trinh_sua_loi.html">Quy Trình Sửa Lỗi</a></li>
-        <li><a href="chat_luong_phan_mem.html">Chat Chất Lượng Phần Mềm</a></li>
-    </ul>
+    <div class="container">
+        <h1>Menu Danh Mục</h1>
+        <ul>
+            <li><a href="chat_luong_phan_mem.html">1. Chỉ Số Chất Lượng Phần Mềm</a></li>
+            <li><a href="tai_lieu_chat_luong.html">2. Tài Liệu Chất Lượng</a></li>
+            <li><a href="quy_trinh_sua_loi.html">3. Quy Trình Sửa Lỗi</a></li>
+           
+        </ul>
+    </div>
 </body>
 </html>
