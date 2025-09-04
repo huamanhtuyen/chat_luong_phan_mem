@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quy trình sửa lỗi phần mềm toàn diện</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
+        h1, h2 { color: #333; }
+        section { margin-bottom: 30px; }
+        .example { background-color: #f4f4f4; padding: 10px; border-left: 5px solid #ccc; }
+        .highlight { background-color: #ffff99; padding: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Quy trình sửa lỗi phần mềm toàn diện</h1>
+    <p>Quy trình sửa lỗi không chỉ đơn giản là sửa một dòng mã nguồn. Nó đòi hỏi một cách tiếp cận có hệ thống, bao gồm việc thu thập thông tin, tái hiện, sửa chữa, kiểm thử toàn diện và đánh giá tác động. Việc này giúp đảm bảo chất lượng phần mềm và tránh các lỗi mới phát sinh. Ngoài ra, việc kiểm thử trên nhiều môi trường hệ điều hành khác nhau là rất quan trọng để đảm bảo tính tương thích và ổn định.</p>
+
+    <section id="mo-ta-loi">
+        <h2>1. Tài liệu mô tả lỗi</h2>
+        <p>Đây là bước đầu tiên và quan trọng nhất. Bạn cần thu thập và ghi chép chi tiết về lỗi, bao gồm triệu chứng, điều kiện xảy ra, và tác động của nó đến người dùng hoặc hệ thống.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Ứng dụng web không hiển thị đúng trên thiết bị di động. Mô tả: Khi truy cập từ điện thoại, menu điều hướng bị chồng lên nội dung chính, khiến người dùng không thể tương tác với các liên kết.
+        </div>
+    </section>
+
+    <section id="tai-hien-loi">
+        <h2>2. Cách tái hiện lỗi</h2>
+        <p>Mô tả các bước cụ thể để tái tạo lỗi một cách nhất quán. Điều này giúp xác nhận lỗi và kiểm tra sau khi sửa.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong>
+            <ol>
+                <li>Mở trình duyệt trên thiết bị di động (ví dụ: Chrome trên Android).</li>
+                <li>Truy cập URL của ứng dụng.</li>
+                <li>Thay đổi kích thước cửa sổ hoặc xoay màn hình.</li>
+                <li>Quan sát menu điều hướng bị chồng lên nội dung.</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="testcase-tai-hien">
+        <h2>3. Testcase tái hiện lỗi</h2>
+        <p>Tạo các testcase tự động hoặc thủ công để tái hiện lỗi một cách đáng tin cậy.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Testcase: "Kiểm tra hiển thị menu trên mobile"
+            <ul>
+                <li>Điều kiện: Trình duyệt Chrome, thiết bị Android với độ phân giải 1080x1920.</li>
+                <li>Bước: Thực hiện các bước tái hiện ở trên.</li>
+                <li>Kết quả mong đợi: Menu hiển thị đúng vị trí.</li>
+                <li>Kết quả thực tế: Menu bị chồng lên.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cach-sua-loi">
+        <h2>4. Cách sửa lỗi</h2>
+        <p>Phân tích nguyên nhân gốc và thực hiện sửa chữa. Điều này có thể bao gồm thay đổi mã, cấu hình hoặc kiến trúc.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Nguyên nhân: CSS không responsive. Sửa: Thêm media queries và sử dụng flexbox cho layout responsive.
+            <pre><code>
+@media (max-width: 768px) {
+    .menu { flex-direction: column; }
+}
+            </code></pre>
+        </div>
+    </section>
+
+    <section id="testcase-sua-loi">
+        <h2>5. Testcase sửa lỗi</h2>
+        <p>Kiểm tra xem sửa chữa có giải quyết được lỗi không.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Chạy lại testcase tái hiện, nhưng lần này kết quả phải là "PASS" - menu hiển thị đúng trên mobile.
+        </div>
+    </section>
+
+    <section id="kiem-tra-similar">
+        <h2>6. Cách kiểm tra lỗi tương tự</h2>
+        <p>Tìm kiếm và kiểm tra các lỗi tương tự có thể tồn tại trong codebase.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Tìm kiếm các thành phần UI khác không responsive, như footer hoặc sidebar, và kiểm tra trên các thiết bị khác nhau.
+        </div>
+    </section>
+
+    <section id="testcase-similar">
+        <h2>7. Testcase kiểm tra similar bug</h2>
+        <p>Tạo testcase cho các lỗi tiềm năng tương tự.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Testcase: "Kiểm tra responsive của footer"
+            <ul>
+                <li>Kiểm tra footer trên tablet và desktop.</li>
+                <li>Đảm bảo không có chồng lấn tương tự.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="check-degrade">
+        <h2>8. Cách check ảnh hưởng của việc sửa lỗi (degrade bug)</h2>
+        <p>Đánh giá xem sửa chữa có gây ra lỗi mới hoặc làm giảm hiệu suất không.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Kiểm tra hiệu suất tải trang sau khi thêm CSS mới, đảm bảo không tăng thời gian tải quá 10%.
+        </div>
+    </section>
+
+    <section id="testcase-degrade">
+        <h2>9. Testcase degrade</h2>
+        <p>Testcase để phát hiện các degrade bug.</p>
+        <div class="example">
+            <strong>Ví dụ:</strong> Testcase hiệu suất: Đo thời gian tải trang trước và sau sửa chữa trên các thiết bị khác nhau.
+        </div>
+    </section>
+
+    <section id="ket-luan">
+        <h2>Kết luận: Tính toàn diện của quy trình</h2>
+        <p class="highlight">Sửa lỗi không chỉ là thay đổi một dòng mã. Nó đòi hỏi sự cẩn thận, kiểm thử toàn diện trên nhiều môi trường hệ điều hành (Windows, macOS, Linux, iOS, Android), và đánh giá tác động lâu dài. Việc bỏ qua bất kỳ bước nào có thể dẫn đến lỗi tái phát hoặc vấn đề mới. Luôn ưu tiên chất lượng và trải nghiệm người dùng.</p>
+        <p>Để đảm bảo, hãy kiểm thử trên:
+        <ul>
+            <li>Các phiên bản trình duyệt khác nhau (Chrome, Firefox, Safari, Edge).</li>
+            <li>Các hệ điều hành: Windows 10/11, macOS, Linux, iOS, Android.</li>
+            <li>Các thiết bị: Desktop, laptop, tablet, smartphone.</li>
+        </ul>
+        </p>
+    </section>
+</body>
+</html>
